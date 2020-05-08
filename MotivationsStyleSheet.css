@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    color: white;
+}
+body{
+    font-family:  monospace;
+    font-style: normal;
+    font-weight: 400;
+    display: grid;
+    background-color:#252525;
+    height:100%;
+    padding:0;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1 auto;
+}
+#TitleNavBar{
+    display: flex;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#TitleNavBar h1{
+    display: flex;
+    align-self: center;
+    margin: 10px 0px;
+}
+#TitleNavBar nav{
+    width: 100%;
+}
+#TitleNavBar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding:0;
+}
+#TitleNavBar ul li{
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+}
+#TitleNavBar ul li a{
+    z-index: 1;
+    color:white;
+    text-decoration: none;
+    padding:10px 5px;
+}
+#TitleNavBar ul li:before{
+    content: "";
+    position: absolute;
+    height:33.33%;
+    width:0;
+    background-color: #0000FF;
+    right: 0;
+    z-index: 0;
+    top:33.33%;
+    transition: all 0.5s;
+}
+#TitleNavBar ul li:after{
+    content: "";
+    position: absolute;
+    height:33.33%;
+    width:0;
+    background-color: #0000FF;
+    left: 0;
+    z-index:0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+#TitleNavBar ul li a:before{
+    position: absolute;
+    content: "";
+    height:33.33%;
+    width:0;
+    background-color: #0000FF;
+    bottom:66.66%;
+    left:0;
+    transition: all 0.5s;
+}
+#TitleNavBar ul li:hover:before,#TitleNavBar ul li:hover:after,#TitleNavBar ul li:hover #TitleNavBar ul li a:before{
+    width:100%;
+}
+main{
+    display: grid;
+    grid-template-rows: repeat(2 auto);
+    grid-template-columns: 1 auto;
+    gap: 25px;
+    overflow: hidden;
+    margin-right:5px;
+}
+#videoGames{
+    grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#videoGames h2{
+    padding: 10px;
+    border:solid 2px white;
+}
+#AI h2{
+    padding: 10px;
+    border:solid 2px white;
+}
+#videoGames p{
+    padding: 10px;
+    border:solid 2px white;
+}
+#AI p{
+    padding: 10px;
+    border:solid 2px white;
+}
+#images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 3px;
+    size: 15%;
+}
+#AI{
+    grid-area: 2/1/3/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+footer{
+    margin-top: 10px;
+}
