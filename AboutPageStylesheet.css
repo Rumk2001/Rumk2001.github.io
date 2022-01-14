@@ -1,5 +1,5 @@
 *{
-    margin:0;
+    margin: 5px;;
     color: white;
 }
 body{
@@ -85,12 +85,12 @@ main{
     flex-direction: column;
 }
 main img{
-    transform: rotate(90deg);
+
     overflow: hidden;
     display: flex;
-    width: 35%;
+    width: 30%;
     height:40%;
-    margin:50px 0px;
+    margin:25px 0px;
 }
 main section{
     display: flex;
